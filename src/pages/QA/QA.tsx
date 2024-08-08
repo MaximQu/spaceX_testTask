@@ -1,5 +1,11 @@
+import { PagePlaceholder } from "@/components";
+
 const QA = () => {
-  return <section>QA</section>;
+  return (
+    <section>
+      <PagePlaceholder />
+    </section>
+  );
 };
 
 export default QA;

@@ -8,3 +8,4 @@ export { default as Metrics } from "./Metrics/Metrics";
 export { default as Stats } from "./Stats/Stats";
 export { default as Team } from "./Team/Team";
 export { default as Loader } from "./Loader/Loader";
+export { default as PagePlaceholder } from "./PagePlaceholder/PagePlaceholder";
