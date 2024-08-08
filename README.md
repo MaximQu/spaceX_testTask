@@ -1,3 +1,23 @@
+## How to build project
+
+- Install node modules
+
+```bash
+npm install
+```
+
+- Run development server
+
+```bash
+npm run dev
+```
+
+- Build project
+
+```bash
+npm run build
+```
+
 ## CI/CD Pipeline Overview
 
 ### Continuous Integration (CI)
