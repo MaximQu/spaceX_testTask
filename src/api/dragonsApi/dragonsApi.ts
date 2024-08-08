@@ -1,6 +1,9 @@
 import { Dragon } from "@/types/Dragons";
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { dragonsByIdTransformResponse, dragonsTransformResponse } from "./utils/dragonsTransformResponse";
+import {
+  dragonsByIdTransformResponse,
+  dragonsTransformResponse,
+} from "./utils/dragonsTransformResponse";
 import {
   setDragonsByIdCache,
   setDragonsCache,

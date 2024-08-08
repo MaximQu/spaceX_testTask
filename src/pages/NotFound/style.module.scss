@@ -12,7 +12,6 @@
   }
 }
 
-
 .text {
   margin-bottom: 3.75rem;
 }
@@ -24,7 +23,7 @@
   padding: 0.5rem 0.75rem;
   transition-duration: var(--t-time);
 
-  @media(hover:hover) {
+  @media (hover: hover) {
     &:hover {
       background-color: var(--c-white);
       color: var(--c-black);

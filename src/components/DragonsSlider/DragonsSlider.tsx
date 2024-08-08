@@ -21,7 +21,6 @@ const DragonsSlider: FC<DragonsSliderProps> = ({ dragonList = [] }) => {
     return [...dragonList, ...dragonMocks];
   }, [dragonList]);
 
-
   return (
     <section className={`${st.dragonSlider} container`}>
       <h2 className={st.title}>Our rockets</h2>

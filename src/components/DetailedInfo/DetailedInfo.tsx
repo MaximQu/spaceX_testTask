@@ -12,7 +12,13 @@ const DetailedInfo: FC<DetailedInfoProps> = ({ data }) => {
   return (
     <section className={`${st.detailedInfo} container`}>
       <div className={st.wrapper}>
-        <img className={st.img} src={data.imgUrl ? data.imgUrl : 'https://placehold.co/450x450'} width={835} height={450} alt={data.name} />
+        <img
+          className={st.img}
+          src={data.imgUrl ? data.imgUrl : "https://placehold.co/450x450"}
+          width={835}
+          height={450}
+          alt={data.name}
+        />
         <div className={st.content}>
           <h2 className={st.heading}>{data.name}</h2>
           <div className={st.list}>

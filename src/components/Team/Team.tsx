@@ -9,10 +9,10 @@ import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import st from "./style.module.scss";
 
 type TeamProps = {
-  data?: CrewMember[]
-}
+  data?: CrewMember[];
+};
 
-const Team: FC<TeamProps> = ({data}) => {
+const Team: FC<TeamProps> = ({ data }) => {
   const swiper = useSwiper();
 
   return (
@@ -24,7 +24,7 @@ const Team: FC<TeamProps> = ({data}) => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
             auctor sed urna a faucibus. Pellentesque mi nisl, mollis convallis
             metus id, congue semper neque. Sed suscipit eget ipsum ut gravida.
-            Fusce 
+            Fusce
           </p>
         </div>
         <div className={st.btnWrapper}>
@@ -61,7 +61,14 @@ const Team: FC<TeamProps> = ({data}) => {
       >
         {data?.map(({ name, image, agency, id }) => (
           <SwiperSlide className={st.slide} key={id}>
-            <img className={st.img} loading="lazy" width={425} height={425} src={image} alt={name} />
+            <img
+              className={st.img}
+              loading="lazy"
+              width={425}
+              height={425}
+              src={image}
+              alt={name}
+            />
             <p className={st.position}>{agency}</p>
             <h2 className={st.name}>{name}</h2>
           </SwiperSlide>
