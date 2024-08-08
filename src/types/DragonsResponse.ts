@@ -51,7 +51,6 @@ export type DragonResponseSchema = {
   dry_mass_lb: number;
   first_flight?: string;
   heat_shield: HeatShield;
-  thrusters: any[];
   launch_payload_mass: PayloadMass;
   launch_payload_vol: PayloadVol;
   return_payload_mass: PayloadMass;

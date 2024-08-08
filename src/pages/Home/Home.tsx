@@ -11,7 +11,7 @@ import {
 } from "@/components";
 import { useMemo } from "react";
 
-const Home = ({}) => {
+const Home = () => {
   const { data, isFetching } = useGetCachedDragonsQuery();
   const { data: crewData, isFetching: isCrewDataFetching } =
     useGetCachedCrewQuery();
