@@ -31,7 +31,9 @@ export const getDragonsByIdCache = (id: string) => {
 };
 
 export const setDragonsByIdCache = (dragonId: string, data: Dragon) => {
-  const cache = getDragonsCache();
+  const cache = JSON.parse(
+    localStorage.getItem(DRAGONS_DATA_LOCAL_STORAGE_KEY) || JSON.stringify({}),
+  );
   localStorage.setItem(
     DRAGONS_DATA_LOCAL_STORAGE_KEY,
     JSON.stringify(Object.assign(cache, { [dragonId]: data })),
