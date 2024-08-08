@@ -1,3 +1,2 @@
-export * from './Globe';
-export * from './Arrow';
-
+export * from "./Globe";
+export * from "./Arrow";
