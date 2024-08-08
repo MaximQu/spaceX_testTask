@@ -1,6 +1,6 @@
 import { Metrics } from "@/components";
 import { Dragon } from "@/types/Dragons";
-import { FC, useEffect, useMemo } from "react";
+import { FC, useMemo } from "react";
 import { Link } from "react-router-dom";
 
 import { FEET_CUBIC, METRE_CUBIC } from "@/common/constants";
