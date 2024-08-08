@@ -6,7 +6,7 @@ const Dragon = () => {
   const { id: idParam } = useParams();
 
   if (!idParam) return null;
-  const { data, isLoading, isError } = useGetDragonByIdQuery(idParam);
+  const { data, isLoading } = useGetDragonByIdQuery(idParam);
   if (!data) return null;
 
   if (isLoading) {
