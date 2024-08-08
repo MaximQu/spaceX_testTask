@@ -13,8 +13,8 @@ export const useGetCachedDragonsQuery = () => {
   return { ...rest, data: data || cachedData };
 };
 
-export const useGetCachedDragonsByIdQuery = (id: string) => {
-  const { data, ...rest } = useGetDragonByIdQuery(id);
+export const useGetCachedDragonsByIdQuery = (id: string, skip: boolean) => {
+  const { data, ...rest } = useGetDragonByIdQuery(id, { skip });
 
   const cachedData = getDragonsByIdCache(id);
 

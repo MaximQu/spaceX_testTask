@@ -5,8 +5,11 @@ import { useParams } from "react-router-dom";
 const Dragon = () => {
   const { id: idParam } = useParams();
 
+  const { data, isLoading } = useGetCachedDragonsByIdQuery(
+    idParam || "",
+    !idParam,
+  );
   if (!idParam) return null;
-  const { data, isLoading } = useGetCachedDragonsByIdQuery(idParam);
   if (!data) return null;
 
   if (isLoading) {
