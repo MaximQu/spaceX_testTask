@@ -12,7 +12,7 @@ export const rtkQueryErrorLogger: Middleware =
     if (isRejected(action)) {
       const payload = action.payload as RejectedActionPayload;
       if (payload.originalStatus === 404) {
-        window.location.pathname = "/not_found";
+        window.location.hash = "not_found";
       }
     }
     return next(action);
