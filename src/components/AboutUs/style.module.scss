@@ -1,0 +1,13 @@
+.title {
+  font-size: var(--fs-h1);
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.video {
+  max-width: 100%;
+  width: 100%;
+  border-radius: 2.5rem;
+  border: 1px solid color-mix(in hsl, var(--c-white) 20%, transparent);
+}

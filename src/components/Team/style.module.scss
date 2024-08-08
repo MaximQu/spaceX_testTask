@@ -1,0 +1,77 @@
+.team {
+  display: flex;
+  gap: 1rem;
+}
+
+.wrapper {
+  width: 100%;
+  min-width: 26.875rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.btnWrapper {
+  display: flex;
+  gap: 0.75rem;
+
+  :global {
+    .team-swiper-button-prev,
+    .team-swiper-button-next {
+      width: 7.875rem;
+      height: 7.875rem;
+      border-radius: 1.25rem;
+      background-color: var(--c-white);
+      transition-duration: var(--t-time);
+
+      svg {
+        color: var(--c-black);
+      }
+
+      &[disabled] {
+        opacity: 0.5;
+      }
+    }
+
+    .team-swiper-button-next {
+      padding-top: 5px;
+      rotate: 180deg;
+    }
+  }
+}
+
+.title {
+  font-size: var(--fs-h1);
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.text {
+  line-height: 1.5;
+}
+
+.slide {
+  border: 1px solid color-mix(in hsl, var(--c-white) 20%, transparent);
+  border-radius: 2.5rem;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.img {
+  margin-bottom: 1rem;
+  border-radius: 2.5rem;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: top;
+}
+
+.position {
+  display: block;
+  text-transform: uppercase;
+  opacity: 0.5;
+  margin-bottom: 0.5rem;
+}
+
+.name {
+  text-transform: uppercase;
+}

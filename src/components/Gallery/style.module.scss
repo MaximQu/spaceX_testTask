@@ -1,0 +1,48 @@
+.gallery {
+  position: relative;
+  padding-bottom: 0;
+
+  :global {
+    .swiper-wrapper {
+      height: 100vh;
+    }
+    .swiper-button-prev {
+      left: 120px;
+    }
+
+    .swiper-button-next {
+      right: 120px;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+    }
+  }
+}
+
+.wrapper {
+  position: absolute;
+  z-index: var(--z-high);
+  isolation: isolate;
+  bottom: 13%;
+  left: 110px;
+}
+
+.img {
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+  height: 100%;
+}
+
+.title {
+  font-size: var(--fs-h1);
+  margin-bottom: 1rem;
+  max-width: 28.4375rem;
+}
+
+.text {
+  font-size: var(--fs-sm);
+  line-height: 1.5;
+  max-width: 28.4375rem;
+}

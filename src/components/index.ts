@@ -1,0 +1,10 @@
+export { default as AboutUs } from "./AboutUs/AboutUs";
+export { default as DetailedInfo } from "./DetailedInfo/DetailedInfo";
+export { default as DragonsSlider } from "./DragonsSlider/DragonsSlider";
+export { default as Gallery } from "./Gallery/Gallery";
+export { default as Header } from "./Header/Header";
+export { default as Hero } from "./Hero/Hero";
+export { default as Metrics } from "./Metrics/Metrics";
+export { default as Stats } from "./Stats/Stats";
+export { default as Team } from "./Team/Team";
+export { default as Loader } from "./Loader/Loader";

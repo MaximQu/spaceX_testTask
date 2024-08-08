@@ -1,0 +1,33 @@
+.notFound {
+  padding-top: 100px;
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 1.75rem;
+
+  span {
+    font-size: clamp(3.625rem, 3.2273rem + 1.697vw, 4.5rem);
+    display: block;
+  }
+}
+
+
+.text {
+  margin-bottom: 3.75rem;
+}
+
+.btn {
+  border: 1px solid var(--c-white);
+  border-radius: 1.3125rem;
+  text-transform: uppercase;
+  padding: 0.5rem 0.75rem;
+  transition-duration: var(--t-time);
+
+  @media(hover:hover) {
+    &:hover {
+      background-color: var(--c-white);
+      color: var(--c-black);
+    }
+  }
+}

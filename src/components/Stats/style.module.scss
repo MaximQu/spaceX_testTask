@@ -1,0 +1,23 @@
+.list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 1.5rem;
+}
+
+.value {
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-bold);
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: var(--fs-h2);
+}

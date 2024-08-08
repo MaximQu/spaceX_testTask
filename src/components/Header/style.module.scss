@@ -1,0 +1,98 @@
+.header {
+  padding: 5rem 2.5rem 0 2.5rem;
+  position: fixed;
+  top: 0;
+  inset-inline: 0;
+  z-index: var(--z-highest);
+  animation: setBg linear forwards;
+  animation-timeline: view(
+
+  ); // Its experimental function, so its don't working in Safari. Please watch it with Chrome.
+  animation-range-start: 100vh;
+  animation-range-end: 150vh;
+}
+
+.logoLink {
+  border: 1px solid var(--c-white);
+  border-radius: 1.3125rem;
+  text-transform: uppercase;
+  padding: 0.5rem 0.75rem;
+}
+
+.content {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-inline: 2.5rem;
+}
+
+.list {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.item {
+  text-transform: uppercase;
+  position: relative;
+  text-align: center;
+
+  a {
+    display: block;
+    min-width: 50px;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--c-white);
+    transition-duration: var(--t-time);
+  }
+
+  &.active {
+    &:after {
+      width: 100%;
+      right: unset;
+      left: 0;
+    }
+  }
+
+  @media (hover: hover) {
+    &:hover:after {
+      width: 100%;
+      right: unset;
+      left: 0;
+    }
+  }
+}
+
+.btn {
+  @extend .logoLink;
+  transition-duration: var(--t-time);
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--c-white);
+      color: var(--c-black);
+    }
+  }
+}
+
+@keyframes setBg {
+  from {
+    background-color: transparent;
+  }
+
+  to {
+    background-color: rgba(#000, 0.5);
+    backdrop-filter: blur(5px);
+    padding-block: 1rem;
+  }
+}

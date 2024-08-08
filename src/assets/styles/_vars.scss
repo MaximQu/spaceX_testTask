@@ -1,0 +1,36 @@
+:root {
+  --main-ff: "Rubik", sans-serif;
+  --container-max-w: 82.5rem;
+  --container-inline-p: 2rem;
+
+  // colors
+  --c-black: hsl(0, 0%, 0%);
+  --c-white: hsl(218, 100%, 100%);
+  --c-red: hsl(7, 66%, 48%);
+
+  // font-weight
+  --fw-xbold: 800;
+  --fw-bold: 700;
+  --fw-semi: 600;
+  --fw-med: 500;
+  --fw-reg: 400;
+
+  // font-size
+  --fs-largest: 6.25rem;
+  --fs-h1: 4rem;
+  --fs-h2: 2rem;
+  --fs-h3: 1.5rem;
+  --fs-h4: 1.25rem;
+  --fs-md: 1.125rem;
+  --fs-sm: 1rem;
+
+  // z-index
+  --z-highest: 1000;
+  --z-high: 100;
+  --z-low: 10;
+  --z-lower: 1;
+  --z-fall: -1;
+
+  // animation
+  --t-time: 0.2s;
+}

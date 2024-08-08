@@ -1,0 +1,66 @@
+@use "./reset";
+@use "./vars";
+@use "./utils";
+@use "./fonts";
+
+body {
+  font-family: var(--main-ff);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-reg);
+  color: var(--c-white);
+  line-height: 1.2;
+  background-color: var(--c-black);
+  min-height: 100vh;
+}
+
+section {
+  padding-block: 3.125rem;
+}
+
+.swiper-pagination {
+  bottom: 40px !important;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  
+  &-bullet {
+    background-color: var(--c-white);
+    width: 1rem;
+    height: 1rem;
+
+    &-active {
+      background-color: var(--c-white);
+    }
+  }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 2rem;
+  height: 1.5rem;
+  transition-duration: var(--t-time);
+  position: absolute;
+  top: unset;
+  bottom: 35px;
+  z-index: var(--z-high);
+  background-image: url("/arrow.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition-duration: var(--t-time);
+
+  @media (hover: hover) {
+    &:hover {
+      scale: 1.2;
+    }
+  }
+}
+
+.swiper-button-next {
+  rotate: 180deg;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  content: "";
+}

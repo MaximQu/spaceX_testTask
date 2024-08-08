@@ -1,0 +1,30 @@
+.hero {
+  padding: 2rem;
+  padding-top: 9.375rem;
+  border: 1px solid color-mix(in hsl, var(--c-white) 20%, transparent);
+  border-radius: 2.5rem;
+  position: relative;
+  background-image: url("/rocket.gif");
+  background-repeat: no-repeat;
+  background-size: 130%;
+  background-position: top -200px right -500px;
+}
+
+.title {
+  font-size: var(--fs-largest);
+  max-width: 36.25rem;
+  text-transform: uppercase;
+  margin-bottom: 5rem;
+}
+
+.wrapper {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.bottomLine {
+  flex: 1;
+  height: 6px;
+  background-image: linear-gradient(to right, var(--c-white), transparent);
+}
