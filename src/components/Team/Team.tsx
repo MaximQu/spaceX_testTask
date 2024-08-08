@@ -29,7 +29,7 @@ const Team: FC<TeamProps> = ({data}) => {
         </div>
         <div className={st.btnWrapper}>
           <button
-            onClick={() => swiper.slidePrev()}
+            onClick={() => swiper?.slidePrev()}
             type="button"
             data-role="none"
             className="team-swiper-button-prev"
@@ -38,7 +38,7 @@ const Team: FC<TeamProps> = ({data}) => {
             <Arrow width={60} height={60} />
           </button>
           <button
-            onClick={() => swiper.slideNext()}
+            onClick={() => swiper?.slideNext()}
             type="button"
             data-role="none"
             className="team-swiper-button-next"

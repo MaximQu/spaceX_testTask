@@ -1,6 +1,10 @@
 import { Dragon } from "@/types/Dragons";
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { DragonResponseSchema } from "../types/DragonsResponse";
+import { DragonResponseSchema } from "../../types/DragonsResponse";
+import {
+  setDragonsByIdCache,
+  setDragonsCache,
+} from "./utils/localStorageUtils";
 
 export const dragonsApi = createApi({
   reducerPath: "dragonsApi",
@@ -22,30 +26,9 @@ export const dragonsApi = createApi({
               height: dragon.height_w_trunk,
             }) as Partial<Dragon>,
         ),
-      async onQueryStarted(_, { dispatch, queryFulfilled }) {
-        dispatch(
-          dragonsApi.util.upsertQueryData(
-            "getDragons",
-            undefined,
-            Object.values(
-              JSON.parse(
-                localStorage.getItem("DRAGONS_DATA_CACHE") ||
-                  JSON.stringify({}),
-              ),
-            ),
-          ),
-        );
+      async onQueryStarted(_, { queryFulfilled }) {
         const { data } = await queryFulfilled;
-        localStorage.setItem(
-          "DRAGONS_DATA_CACHE",
-          JSON.stringify(
-            data.reduce(
-              (acc, curr) =>
-                curr.id != null ? Object.assign(acc, { [curr.id]: curr }) : acc,
-              {},
-            ),
-          ),
-        );
+        setDragonsCache(data);
       },
     }),
     getDragonById: builder.query<Dragon, string>({
@@ -60,24 +43,9 @@ export const dragonsApi = createApi({
           height: dragon.height_w_trunk,
           crewCapacity: dragon.crew_capacity,
         }) as Dragon,
-      async onQueryStarted(dragonId, { dispatch, queryFulfilled }) {
-        dispatch(
-          dragonsApi.util.upsertQueryData(
-            "getDragonById",
-            dragonId,
-            JSON.parse(
-              localStorage.getItem("DRAGONS_DATA_CACHE") || JSON.stringify({}),
-            )[dragonId],
-          ),
-        );
+      async onQueryStarted(dragonId, { queryFulfilled }) {
         const { data } = await queryFulfilled;
-        const cache = JSON.parse(
-          localStorage.getItem("DRAGONS_DATA_CACHE") || JSON.stringify({}),
-        );
-        localStorage.setItem(
-          "DRAGONS_DATA_CACHE",
-          JSON.stringify(Object.assign(cache, { [dragonId]: data })),
-        );
+        setDragonsByIdCache(dragonId, data);
       },
     }),
   }),

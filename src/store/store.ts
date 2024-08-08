@@ -1,5 +1,5 @@
-import { crewApi } from "@/api/crewApi";
-import { dragonsApi } from "@/api/dragonsApi";
+import { crewApi } from "@/api/crewApi/crewApi";
+import { dragonsApi } from "@/api/dragonsApi/dragonsApi";
 import { configureStore, isRejected, Middleware } from "@reduxjs/toolkit";
 import { setupListeners } from "@reduxjs/toolkit/query";
 
