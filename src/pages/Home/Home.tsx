@@ -1,5 +1,5 @@
-import { useGetCrewQuery } from "@/api/crewApi";
-import { useGetDragonsQuery } from "@/api/dragonsApi";
+import { useGetCachedCrewQuery } from "@/api/crewApi/hooks/useGetCachedCrewQuery";
+import { useGetCachedDragonsQuery } from "@/api/dragonsApi/hooks/useGetCachedDragonsQuery";
 import {
   AboutUs,
   DragonsSlider,
@@ -12,8 +12,8 @@ import {
 import { useMemo } from "react";
 
 const Home = ({}) => {
-  const { data, isFetching } = useGetDragonsQuery();
-  const { data: crewData, isFetching: isCrewDataFetching } = useGetCrewQuery();
+  const { data, isFetching } = useGetCachedDragonsQuery();
+  const { data: crewData, isFetching: isCrewDataFetching } = useGetCachedCrewQuery();
 
   const isDragonsLoading = useMemo(
     () => isFetching && data == null,
