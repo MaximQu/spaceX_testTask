@@ -1,3 +1,7 @@
+## About project
+
+This project is a test app to apply for frontend developer position. The app itself its implementation of [spaceX API](https://api.spacexdata.com/v4/dragons)
+
 ## How to build project
 
 - Install node modules
