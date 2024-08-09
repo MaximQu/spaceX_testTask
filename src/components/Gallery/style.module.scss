@@ -22,7 +22,7 @@
   isolation: isolate;
   bottom: 13%;
   left: clamp(1.25rem, -0.1091rem + 8.4656vw, 6.875rem);
-  
+
   @media (width <= 480px) {
     padding-right: 1rem;
   }
