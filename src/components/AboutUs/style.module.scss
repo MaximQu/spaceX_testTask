@@ -1,5 +1,5 @@
 .title {
-  font-size: var(--fs-h1);
+  font-size: clamp(1.75rem, 0.8571rem + 3.8095vw, var(--fs-h1));
   margin-bottom: 2rem;
   text-transform: uppercase;
   text-align: center;
@@ -10,4 +10,9 @@
   width: 100%;
   border-radius: 2.5rem;
   border: 1px solid color-mix(in hsl, var(--c-white) 20%, transparent);
+
+  @media (width <= 575px) {
+    aspect-ratio: 1;
+    height: auto;
+  }
 }

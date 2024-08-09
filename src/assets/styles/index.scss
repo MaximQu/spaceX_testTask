@@ -13,8 +13,12 @@ body {
   min-height: 100vh;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 section {
-  padding-block: 3.125rem;
+  padding-block: clamp(2rem, 1.3942rem + 2.3077vw, 3.125rem);
 }
 
 .swiper-pagination {
