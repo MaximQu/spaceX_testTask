@@ -3,5 +3,5 @@
 }
 .title {
   text-align: center;
-  font-size: var(--fs-h1);
+  font-size: clamp(2rem, 0.8571rem + 3.8095vw, var(--fs-h1));
 }
