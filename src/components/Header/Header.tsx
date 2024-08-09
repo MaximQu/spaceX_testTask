@@ -24,7 +24,7 @@ const Header: FC = () => {
   return (
     <header className={st.header}>
       <div className={`${st.content} ${isOpen ? st.active : ""} container`}>
-        <Link className={st.logoLink} to={"/"}>
+        <Link className={st.logoLink} onClick={() => setIsOpen(false)} to={"/"}>
           LOGO
         </Link>
         <nav>

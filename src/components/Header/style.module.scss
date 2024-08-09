@@ -27,10 +27,6 @@
   border-radius: 1.3125rem;
   text-transform: uppercase;
   padding: 0.5rem 0.75rem;
-
-  @media (width <= 768px) {
-    display: none;
-  }
 }
 
 .content {
