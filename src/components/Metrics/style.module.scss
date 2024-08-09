@@ -5,4 +5,9 @@
   border-bottom: 1px solid color-mix(in hsl, var(--c-white) 10%, transparent);
   padding-bottom: 0.75rem;
   text-transform: uppercase;
+
+  span:last-child  {
+    text-align: right;
+  }
+
 }
