@@ -1,6 +1,6 @@
 .hero {
   padding: 2rem;
-  padding-top: 9.375rem;
+  padding-top: clamp(2rem, -0.4327rem + 13.0769vw, 9.375rem);
   border: 1px solid color-mix(in hsl, var(--c-white) 20%, transparent);
   border-radius: 2.5rem;
   position: relative;
@@ -8,10 +8,32 @@
   background-repeat: no-repeat;
   background-size: 130%;
   background-position: top -200px right -500px;
+
+  @media (width <= 1199px) {
+    background-position: top -150px right -400px;
+  }
+
+  @media (width <= 991px) {
+    background-position: top -70px right -400px;
+    background-size: 120%;
+  }
+
+  @media (width <= 769px) {
+    background-position: top -40px right -300px;
+  }
+
+  @media (width <= 650px) {
+    background-image: unset;
+  }
+
+  @media (width <= 440px) {
+    background-position: top 60px right -150px;
+    background-image: url("/rocket.gif");
+  }
 }
 
 .title {
-  font-size: var(--fs-largest);
+  font-size: clamp(2.5rem, 1.0119rem + 6.3492vw, var(--fs-largest));
   max-width: 36.25rem;
   text-transform: uppercase;
   margin-bottom: 5rem;

@@ -4,23 +4,36 @@
 
 .wrapper {
   display: grid;
-  gap: 1.5rem;
   align-items: center;
+  gap: 1.5rem;
+  border: 1px solid color-mix(in hsl, var(--c-white) 20%, transparent);
+  border-radius: 2.5rem;
+
+  padding: 1.5rem;
   grid-template-columns: 1fr 28.125rem;
+
+  @media (width <= 800px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .content {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+
+  @media (width <= 800px) {
+    width: 100%;
+    align-items: center;
+  }
 }
 
 .img {
-  border-radius: 2.5rem;
+  border-radius: 1.25rem;
   border: 1px solid color-mix(in hsl, var(--c-white) 20%, transparent);
   transition-duration: var(--t-time);
   max-height: 28.125rem;
-
+  height: 100%;
   object-fit: cover;
 }
 

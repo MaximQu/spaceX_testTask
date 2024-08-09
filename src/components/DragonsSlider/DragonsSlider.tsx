@@ -31,7 +31,17 @@ const DragonsSlider: FC<DragonsSliderProps> = ({ dragonList = [] }) => {
         slidesPerView={3}
         navigation
         grabCursor
-        direction="horizontal"
+        breakpoints={{
+          280: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          1280: {
+            slidesPerView: 3,
+          },
+        }}
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
       >

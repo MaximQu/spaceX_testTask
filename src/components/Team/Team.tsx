@@ -35,7 +35,7 @@ const Team: FC<TeamProps> = ({ data }) => {
             className="team-swiper-button-prev"
             aria-label="Previous"
           >
-            <Arrow width={60} height={60} />
+            <Arrow />
           </button>
           <button
             onClick={() => swiper?.slideNext()}
@@ -44,7 +44,7 @@ const Team: FC<TeamProps> = ({ data }) => {
             className="team-swiper-button-next"
             aria-label="Next"
           >
-            <Arrow width={60} height={60} />
+            <Arrow />
           </button>
         </div>
       </div>
@@ -54,6 +54,14 @@ const Team: FC<TeamProps> = ({ data }) => {
         spaceBetween={20}
         slidesPerView={2}
         grabCursor
+        breakpoints={{
+          320: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+        }}
         navigation={{
           nextEl: ".team-swiper-button-next",
           prevEl: ".team-swiper-button-prev",

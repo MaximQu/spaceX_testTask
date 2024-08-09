@@ -13,10 +13,6 @@
     .swiper-button-next {
       right: 120px;
     }
-
-    .swiper-button-prev,
-    .swiper-button-next {
-    }
   }
 }
 
@@ -25,7 +21,11 @@
   z-index: var(--z-high);
   isolation: isolate;
   bottom: 13%;
-  left: 110px;
+  left: clamp(1.25rem, -0.1091rem + 8.4656vw, 6.875rem);
+  
+  @media (width <= 480px) {
+    padding-right: 1rem;
+  }
 }
 
 .img {
@@ -36,7 +36,7 @@
 }
 
 .title {
-  font-size: var(--fs-h1);
+  font-size: clamp(1.75rem, 0.8571rem + 3.8095vw, var(--fs-h1));
   margin-bottom: 1rem;
   max-width: 28.4375rem;
 }

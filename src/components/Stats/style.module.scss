@@ -3,6 +3,12 @@
   justify-content: space-around;
   align-items: center;
   gap: 1rem;
+
+  @media (width <= 991px) {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
 }
 
 .item {
@@ -13,11 +19,11 @@
 }
 
 .value {
-  font-size: var(--fs-h1);
+  font-size: clamp(2rem, 0.8571rem + 3.8095vw, var(--fs-h1));
   font-weight: var(--fw-bold);
 }
 
 .title {
   text-transform: uppercase;
-  font-size: var(--fs-h2);
+  font-size: clamp(1rem, 0.6032rem + 1.6931vw, var(--fs-h2));
 }
